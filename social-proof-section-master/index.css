@@ -2,17 +2,167 @@ p{
   display: inline-block;
   font-family: roboto;
   font-size: 15px;
+ 
+}
+
+
+body{
+  padding: 70px;
 }
 
 .top-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
+ 
 }
 
 .left-side{
-  background-color: purple;
+  display: flex;
+  flex-direction: column;
 }
 
+.title{
+  font-size: 35px;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+}
+
+.text{
+  color: hsl(303, 10%, 53%);
+}
+
+
+
 .right-side{
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.star-rate{
+  
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: hsl(300, 24%, 96%);
+  margin-bottom: 10px;
+  padding: 0 20px;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.star-rate-2{
+  transform: translateX(20px);
+}
+
+.star-rate-3{
+  transform: translateX(40px);
+}
+
+.star-side-1,
+.star-side-2,
+.star-side-3{
+  padding-right: 20px;
+}
+
+.star-side-2{
+ margin-left: 5px;
+}
+
+.rate-text{
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+}
+
+
+.bottom-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 70px;
+  gap: 20px; 
+}
+
+.bottom{
+  background-color: hsl(300, 43%, 22%);
+  padding: 30px;
+  border-radius: 10px;
+  
+}
+
+.image{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+
+.bottom-flex{
+  display: flex;
+  align-items: center;
+}
+
+.name{
+  color: hsl(0, 0%, 100%);
+  margin: 2px 0;
+}
+.buyer{
+  color: hsl(300, 43%, 52%);
+  margin: 2px 0;
+}
+
+.bottom-text{
+  color: hsl(0, 0%, 100%);
+}
+
+.bottom-2{
+  transform: translateY(20px);
+  
+}
+
+.bottom-3{
+  transform: translateY(40px);
+}
+
+
+
+
+@media (max-width: 1000px){
+
+  .top-container{
+    grid-template-columns: 1fr;
+  }
+
+  .star-rate-2,
+  .star-rate-3{
+    transform: none;
+  }
+
+  .title{
+    text-align: center;
+  }
+  .text{
+    text-align: center;
+  }
+
+  .right-side{
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .bottom-container{
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-2,
+  .bottom-3{
+    transform: 0;
+  }
+
+  .name-con{
+    display: flex;
+    flex-direction: column;
+  }
 }
